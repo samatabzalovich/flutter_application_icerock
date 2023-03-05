@@ -47,7 +47,6 @@ dependencies:
   url_launcher: ^6.1.10
   internet_connection_checker: ^1.0.0+1
   sizer: ^2.0.15
-  the_splash: ^0.3.1
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +74,6 @@ flutter:
   assets:
     - assets/images/
     - assets/json/
-    - flutter_native_splash.yaml
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
