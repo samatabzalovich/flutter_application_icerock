@@ -37,7 +37,7 @@ class CustomAlertDialog extends StatelessWidget {
                     SizedBox(height: 8,),
                     Container(
                       child: Center(
-                        child: TextWidget('Error data / error code\ninformation for developers', size: 13,height: 18,),
+                        child: TextWidget('Error data / error code\ninformation for developers', size: 13,height: 18, alignment: TextAlign.center, overflow: TextOverflow.visible,),
                       ),
                     ),
                   ],

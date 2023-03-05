@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/default_button.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
+import 'package:flutter_svg/svg.dart';
 
 class RepoProblem extends StatefulWidget {
   final String errorType;
@@ -16,7 +17,7 @@ class _RepoProblemState extends State<RepoProblem> {
   Map<String, List<dynamic>> widgets = {
     "con": [
       'Retry',
-      Image.asset('assets/images/conn.png'),
+      SvgPicture.asset('assets/images/conn.svg'),
       TextWidget(
         'Connection error',
         alignment: TextAlign.center,
@@ -34,7 +35,7 @@ class _RepoProblemState extends State<RepoProblem> {
       'Retry',
       Padding(
         padding: EdgeInsets.only(top: 100),
-        child: Image.asset('assets/images/conn.png'),
+        child: SvgPicture.asset('assets/images/conn.svg'),
       ),
       TextWidget(
         'Load error',
@@ -51,7 +52,7 @@ class _RepoProblemState extends State<RepoProblem> {
     ],
     "empty": [
       'Refresh',
-      Image.asset('assets/images/Empty.png'),
+      SvgPicture.asset('assets/images/Empty.svg'),
       TextWidget(
         'Empty',
         alignment: TextAlign.center,
@@ -67,7 +68,7 @@ class _RepoProblemState extends State<RepoProblem> {
     ],
     "error": [
       'Retry',
-      Image.asset('assets/images/error.png'),
+      SvgPicture.asset('assets/images/error.svg'),
       TextWidget(
         'Something Error',
         alignment: TextAlign.center, height: 28,

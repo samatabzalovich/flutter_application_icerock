@@ -26,7 +26,7 @@ class AuthRepository extends StateNotifier<String> {
       var tokenRes = await http.post(
         Uri.parse('$_uri'),
         headers: {'Authorization': 'Bearer $token'},
-      ).timeout(Duration(seconds: 5));
+      ).timeout(Duration(seconds: 6));
       bool isOk = httpErrorHandle(
         response: tokenRes,
       );

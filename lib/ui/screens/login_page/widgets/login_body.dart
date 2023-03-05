@@ -6,6 +6,7 @@ import 'package:flutter_application_icerock/ui/common/widgets/custom_alert_dialo
 import 'package:flutter_application_icerock/ui/common/widgets/default_button.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LoginBody extends ConsumerStatefulWidget {
   LoginBody({super.key});
@@ -54,6 +55,7 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
               RepositoryPage.routeName, (route) => false);
         } else {
           _showAlertDialog();
+          isValid = false;
         }
       }
     } catch (e) {
@@ -122,8 +124,8 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                   ? 67
                   : 40,
             ),
-            Image.asset(
-              'assets/images/Logo.png',
+            SvgPicture.asset(
+              'assets/images/Logo.svg',
               width: 96,
             ),
             SizedBox(
@@ -147,7 +149,8 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                       ),
                       placeholder: 'Personal access token',
                       focusNode: _focusNode,
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 13),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 13),
                       decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.circular(8.0),
@@ -159,10 +162,15 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                           fontFamily: 'SF Pro Text'),
                     ),
                   ),
-                  if (isValid == false) Padding(
-                    padding: const EdgeInsets.only(top: 6, left: 16),
-                    child: TextWidget('Invalid token',color: Color(0xffCB4F4F), size: 12, ),
-                  ),
+                  if (isValid == false)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 6, left: 16),
+                      child: TextWidget(
+                        'Invalid token',
+                        color: Color(0xffCB4F4F),
+                        size: 12,
+                      ),
+                    ),
                 ],
               ),
             )

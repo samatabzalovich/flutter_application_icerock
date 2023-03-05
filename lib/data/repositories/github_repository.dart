@@ -36,7 +36,7 @@ class GithubRepository {
       }
       final res = await http.get(_uri, headers: {
         'Authorization': 'Bearer $token'
-      }).timeout(Duration(seconds: 5));
+      }).timeout(Duration(seconds: 8));
       List<RepoModel> repos = [];
 
       bool isOk = httpErrorHandle(

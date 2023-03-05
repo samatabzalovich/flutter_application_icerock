@@ -27,7 +27,7 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      maxLines: 5,
+      maxLines:overflow == TextOverflow.visible ? 5 : 1,
       textAlign: alignment,
       overflow: overflow,
       style: TextStyle(

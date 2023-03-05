@@ -36,16 +36,18 @@ class RepositoryDetailsBody extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  CupertinoButton(
-                      onPressed: () async {
-                        print(await launchUrl(Uri.parse(repo.htmlUrl)));
-                      },
-                      child: TextWidget(
-                        repo.htmlUrl.substring(8),
-                        color: Colors.blue,
-                        weight: FontWeight.w500,
-                        overflow: TextOverflow.ellipsis,
-                      )),
+                  Expanded(
+                    child: GestureDetector(
+                        onTap: () async {
+                          print(await launchUrl(Uri.parse(repo.htmlUrl)));
+                        },
+                        child: TextWidget(
+                          repo.htmlUrl.substring(8),
+                          color: Colors.blue,
+                          weight: FontWeight.w500,
+                          overflow: TextOverflow.ellipsis,
+                        )),
+                  ),
                 ],
               ),
               SizedBox(
