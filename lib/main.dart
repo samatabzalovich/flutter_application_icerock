@@ -6,11 +6,14 @@ import 'package:flutter_application_icerock/ui/screens/repository_page/repositor
 import 'package:flutter_application_icerock/ui/common/widgets/custom_progress_indicator.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:the_splash/the_splash.dart';
 
 import 'data/services/network_status_service.dart';
 import 'ui/screens/login_page/login_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SplashScreenData.preload();
   runApp(const ProviderScope(
     child: MyApp(),
   ));
