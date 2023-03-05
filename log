@@ -1,0 +1,48 @@
+[33mcommit eec11b796ac98b9dde59da16f5d5933226f271e6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Samat <samatabzalovich@gmail.com>
+Date:   Sun Mar 5 18:18:03 2023 +0600
+
+            new file:   android/app/src/main/res/drawable-hdpi/splash.png
+            new file:   android/app/src/main/res/drawable-mdpi/splash.png
+            new file:   android/app/src/main/res/drawable-v21/background.png
+            modified:   android/app/src/main/res/drawable-v21/launch_background.xml
+            new file:   android/app/src/main/res/drawable-xhdpi/splash.png
+            new file:   android/app/src/main/res/drawable-xxhdpi/splash.png
+            new file:   android/app/src/main/res/drawable-xxxhdpi/splash.png
+            new file:   android/app/src/main/res/drawable/background.png
+            modified:   android/app/src/main/res/drawable/launch_background.xml
+            modified:   android/app/src/main/res/values/styles.xml
+            new file:   assets/generated/1.5x/splash.png
+            new file:   assets/generated/2.0x/splash.png
+            new file:   assets/generated/3.0x/splash.png
+            new file:   assets/generated/4.0x/splash.png
+            new file:   assets/generated/splash.png
+            new file:   flutter_native_splash.yaml
+            new file:   ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json
+            new file:   ios/Runner/Assets.xcassets/LaunchBackground.imageset/background.png
+            modified:   ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+            modified:   ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png
+            modified:   ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png
+            modified:   ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png
+            modified:   ios/Runner/Base.lproj/LaunchScreen.storyboard
+            modified:   ios/Runner/Info.plist
+            modified:   lib/main.dart
+            modified:   pubspec.lock
+            modified:   pubspec.yaml
+            modified:   web/index.html
+            new file:   web/splash/img/dark-1x.png
+            new file:   web/splash/img/dark-2x.png
+            new file:   web/splash/img/dark-3x.png
+            new file:   web/splash/img/dark-4x.png
+            new file:   web/splash/img/light-1x.png
+            new file:   web/splash/img/light-2x.png
+            new file:   web/splash/img/light-3x.png
+            new file:   web/splash/img/light-4x.png
+            new file:   web/splash/splash.js
+            new file:   web/splash/style.css
+
+[33mcommit 50b4413312d4fa2dc7a1e03bfc68340cead7c913[m
+Author: Samat <samatabzalovich@gmail.com>
+Date:   Sun Mar 5 17:10:36 2023 +0600
+
+    first commit
