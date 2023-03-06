@@ -34,7 +34,7 @@ class _RepoBodyState extends ConsumerState<RepoBody> {
                   builder: (BuildContext context,
                       AsyncSnapshot<List<RepoModel>?> snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(child: CustomCircularProgressIndicator());
+                      return Center(child: Container(width: 56, height: 56,child: CustomCircularProgressIndicator(strokeWidth: 7,)));
                     }
                     if (snapshot.hasError) {
                       String errorMessage = snapshot.error.toString();
@@ -89,7 +89,7 @@ class _RepoBodyState extends ConsumerState<RepoBody> {
                   });
             }
           }
-          return Center(child: CustomCircularProgressIndicator());
+          return Center(child: Container(width: 56, height: 56,child: CustomCircularProgressIndicator(strokeWidth: 7,)));
         });
   }
 }

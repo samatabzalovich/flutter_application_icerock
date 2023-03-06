@@ -22,7 +22,7 @@ class MyApp extends ConsumerWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Sizer(builder: (context, o, dt) =>  CupertinoApp(
+    return CupertinoApp(
       builder: (context, widget) => ResponsiveWrapper.builder(
           BouncingScrollWrapper.builder(context, widget as Widget),
           maxWidth: 1200,
@@ -74,6 +74,6 @@ class MyApp extends ConsumerWidget {
               );
           }),
       onGenerateRoute: generateRoute,
-    ));
+    );
   }
 }

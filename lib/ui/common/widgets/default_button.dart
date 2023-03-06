@@ -30,7 +30,7 @@ class _DefaultButtonState extends State<DefaultButton> {
         // style: ElevatedButton.styleFrom(backgroundColor: ),
         color: Color(0xff5A9357),
         onPressed: widget.onPressedAction,
-        child: Visibility(visible: !widget.isLoading, replacement:   SizedBox(width: 24, height: 24,child: CustomCircularProgressIndicator(strokeWidth: 4,color: CupertinoColors.white,)), child: TextWidget(widget.name, weight: FontWeight.w600,),),
+        child: Visibility(visible: !widget.isLoading, replacement:   SizedBox(width: 24,child: CustomCircularProgressIndicator()), child: TextWidget(widget.name, weight: FontWeight.w600,),),
       ),
     );
   }
