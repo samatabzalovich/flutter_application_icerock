@@ -21,7 +21,7 @@ class ClickableListTile extends StatelessWidget {
             .pushNamed(RepositoryDetailsPage.routeName, arguments: repo);
       },
       child: Container(
-        padding: EdgeInsets.only(top: 14, bottom: 16),
+        padding:const EdgeInsets.only(top: 14, bottom: 16),
         decoration: const BoxDecoration(
             border:
                 Border(bottom: BorderSide(width: 1, color: Color(0xff21262D)))),

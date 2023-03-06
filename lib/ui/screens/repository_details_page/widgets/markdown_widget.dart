@@ -13,7 +13,7 @@ class MarkDownWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Markdown(
-      physics: MediaQuery.of(context).orientation == Orientation.portrait ? BouncingScrollPhysics() : NeverScrollableScrollPhysics(),
+      physics: MediaQuery.of(context).orientation == Orientation.portrait ?const BouncingScrollPhysics() : const NeverScrollableScrollPhysics(),
       // builders: ,
       shrinkWrap: MediaQuery.of(context).orientation == Orientation.portrait ? false : true,
       imageBuilder: (uri, title, alt) => const SizedBox.shrink(),

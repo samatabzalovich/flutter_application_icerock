@@ -69,4 +69,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noReadme => 'No README.md';
+
+  @override
+  String get pageNotFound => 'Page does not exist';
 }

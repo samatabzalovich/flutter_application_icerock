@@ -1,21 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_icerock/data/repositories/github_repository.dart';
 import 'package:flutter_application_icerock/domain/models/repository_model.dart';
-import 'package:flutter_application_icerock/ui/common/widgets/custom_progress_indicator.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import 'package:flutter_application_icerock/ui/screens/repository_details_page/widgets/markdown_widget.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
-
 import '../../../../data/utils/translation.dart';
 import 'custom_markdown.dart';
 
 class RepositoryDetailsBody extends StatelessWidget {
   final RepoModel repo;
-  RepositoryDetailsBody({Key? key, required this.repo}) : super(key: key);
+  const RepositoryDetailsBody({Key? key, required this.repo}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,24 +16,24 @@ class RepositoryDetailsBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding( 
-          padding: EdgeInsets.symmetric(horizontal: 19),
+          padding: const EdgeInsets.symmetric(horizontal: 19),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.link,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Expanded(
                     child: GestureDetector(
                         onTap: () async {
-                          print(await launchUrl(Uri.parse(repo.htmlUrl)));
+                          await launchUrl(Uri.parse(repo.htmlUrl));
                         },
                         child: TextWidget(
                           repo.htmlUrl.substring(8),
@@ -51,7 +44,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 28,
               ),
               Row(
@@ -59,11 +52,11 @@ class RepositoryDetailsBody extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.balance,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       TextWidget(
@@ -79,7 +72,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 28,
               ),
               Row(
@@ -87,20 +80,20 @@ class RepositoryDetailsBody extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.star,
                         color: Color(0xffFAD876),
                         size: 30,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       TextWidget(
                         repo.stars.toString(),
                         weight: FontWeight.w500,
-                        color: Color(0xffFAD876),
+                        color: const Color(0xffFAD876),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       TextWidget(translation(context).stars),
@@ -108,20 +101,20 @@ class RepositoryDetailsBody extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      FaIcon(
+                      const FaIcon(
                         FontAwesomeIcons.codeFork,
                         color: Color(0xff6ED370),
                         size: 23,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       TextWidget(
                         repo.forks.toString(),
                         weight: FontWeight.w500,
-                        color: Color(0xff6ED370),
+                        color:const Color(0xff6ED370),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       TextWidget(translation(context).forks),
@@ -140,7 +133,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                       TextWidget(
                         repo.watchers.toString(),
                         weight: FontWeight.w500,
-                        color: Color(0xff9CFFF9),
+                        color:const Color(0xff9CFFF9),
                       ),
                       const SizedBox(
                         width: 5,

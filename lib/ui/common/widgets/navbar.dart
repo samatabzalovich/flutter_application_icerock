@@ -11,14 +11,14 @@ CupertinoNavigationBar createNavBar(
     bool isBackPageExists = false}) {
   return CupertinoNavigationBar(
     padding: EdgeInsetsDirectional.zero,
-    backgroundColor: Color(0xFF0D1117),
+    backgroundColor:const Color(0xFF0D1117),
     leading: isBackPageExists
         ? CupertinoButton(
             padding: EdgeInsets.zero,
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Icon(
+            child:const Icon(
               Icons.arrow_back_ios_new,
               size: 28,
             ),
@@ -28,7 +28,7 @@ CupertinoNavigationBar createNavBar(
     // centerTitle: false,
     middle: Text(
       title,
-      style: TextStyle(color: CupertinoColors.white, fontSize: 17),
+      style:const TextStyle(color: CupertinoColors.white, fontSize: 17),
     ),
     trailing: CupertinoButton(
         padding: EdgeInsets.zero,

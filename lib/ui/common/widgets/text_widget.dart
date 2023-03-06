@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
-  late String text;
+  final String text;
   final double size;
   final Color color;
   final FontWeight weight;
   final double height;
   final TextOverflow overflow;
   final TextAlign alignment;
-  TextWidget(this.text,
+  const TextWidget(this.text,
       {Key? key,
       this.size = 16,
       this.color = Colors.white,

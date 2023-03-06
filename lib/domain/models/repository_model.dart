@@ -36,7 +36,7 @@ class RepoModel {
       language: map['language'] ?? 'none',
       languageColor: 0xffffff,
       htmlUrl: map['html_url'] ?? '',
-      license: map['license'] != null ? map['license']['key'] ?? 'none' : 'none',
+      license: map['license'] != null ? map['license']['spdx_id'] ?? 'none' : 'none',
       forks: map['forks_count']?.toInt() ?? 0,
       watchers: map['watchers_count']?.toInt() ?? 0,
       mdLink: '',

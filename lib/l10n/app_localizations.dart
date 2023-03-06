@@ -222,6 +222,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No README.md'**
   String get noReadme;
+
+  /// No description provided for @pageNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Page does not exist'**
+  String get pageNotFound;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

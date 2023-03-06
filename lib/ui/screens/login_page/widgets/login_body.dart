@@ -11,7 +11,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../data/utils/translation.dart';
 
 class LoginBody extends ConsumerStatefulWidget {
-  LoginBody({super.key});
+  const LoginBody({super.key});
 
   @override
   ConsumerState<LoginBody> createState() => _LoginBodyState();
@@ -29,7 +29,7 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
   void _showAlertDialog() {
     showCupertinoModalPopup<void>(
         context: context,
-        builder: (BuildContext context) => CustomAlertDialog());
+        builder: (BuildContext context) => const CustomAlertDialog());
   }
 
   void signIn() async {
@@ -110,11 +110,11 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
   Widget build(BuildContext context) {
     Color borderColor;
     if ((_isFocused && isValid == null) || (_isFocused && isValid == true)) {
-      borderColor = Color(0xFF58A6FF);
+      borderColor = const Color(0xFF58A6FF);
     } else if (isValid == false) {
       borderColor = CupertinoColors.systemRed;
     } else {
-      borderColor = Color(0xff21262D);
+      borderColor =const Color(0xff21262D);
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,17 +130,17 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
               'assets/images/Logo.svg',
               width: 96,
             ),
-            SizedBox(
+            const SizedBox(
               height: 56,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 16),
+              margin:const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderRadius:const BorderRadius.all(Radius.circular(8)),
                         border: Border.all(width: 1, color: borderColor)),
                     child: CupertinoTextField(
                       controller: _controller,
@@ -151,7 +151,7 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                       ),
                       placeholder: translation(context).textFieldText,
                       focusNode: _focusNode,
-                      padding:
+                      padding:const
                           EdgeInsets.symmetric(horizontal: 16, vertical: 13),
                       decoration: BoxDecoration(
                         color: Colors.transparent,
@@ -168,7 +168,7 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                       padding: const EdgeInsets.only(top: 6, left: 16),
                       child: TextWidget(
                         translation(context).invalidToken,
-                        color: Color(0xffCB4F4F),
+                        color:const Color(0xffCB4F4F),
                         size: 12,
                       ),
                     ),

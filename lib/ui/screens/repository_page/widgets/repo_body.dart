@@ -4,11 +4,8 @@ import 'package:flutter_application_icerock/data/repositories/github_repository.
 import 'package:flutter_application_icerock/data/services/network_status_service.dart';
 import 'package:flutter_application_icerock/domain/models/repository_model.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/custom_progress_indicator.dart';
-import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
 import 'package:flutter_application_icerock/ui/screens/login_page/login_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../../data/repositories/auth_repository.dart';
 import '../../../common/repo_problem/repo_problem.dart';
 import 'clickable_list_tile.dart';
 
@@ -34,7 +31,7 @@ class _RepoBodyState extends ConsumerState<RepoBody> {
                   builder: (BuildContext context,
                       AsyncSnapshot<List<RepoModel>?> snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(child: Container(width: 56, height: 56,child: CustomCircularProgressIndicator(strokeWidth: 7,)));
+                      return const Center(child: SizedBox(width: 56, height: 56,child: CustomCircularProgressIndicator(strokeWidth: 7,)));
                     }
                     if (snapshot.hasError) {
                       String errorMessage = snapshot.error.toString();
@@ -89,7 +86,7 @@ class _RepoBodyState extends ConsumerState<RepoBody> {
                   });
             }
           }
-          return Center(child: Container(width: 56, height: 56,child: CustomCircularProgressIndicator(strokeWidth: 7,)));
+          return const Center(child: SizedBox(width: 56, height: 56,child: CustomCircularProgressIndicator(strokeWidth: 7,)));
         });
   }
 }

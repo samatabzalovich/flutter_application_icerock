@@ -49,6 +49,7 @@ dependencies:
   internet_connection_checker: ^1.0.0+1
   sizer: ^2.0.15
   flutter_svg: ^2.0.2
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:

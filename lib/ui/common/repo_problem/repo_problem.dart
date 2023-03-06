@@ -38,7 +38,7 @@ class _RepoProblemState extends State<RepoProblem> {
     "load": [
       translation(context).retry,
       Padding(
-        padding: EdgeInsets.only(top: 100),
+        padding: const EdgeInsets.only(top: 100),
         child: SvgPicture.asset('assets/images/conn.svg'),
       ),
       TextWidget(
@@ -96,7 +96,7 @@ class _RepoProblemState extends State<RepoProblem> {
           mainAxisSize: MainAxisSize.min,
           children: [
             widgets[widget.errorType]![1],
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             widgets[widget.errorType]![2],
             widgets[widget.errorType]![3]
           ],

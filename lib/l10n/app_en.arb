@@ -20,5 +20,6 @@
     "dialogDescription": "Error data / error code\n information for developers",
     "ok": "Ok",
     "invalidToken": "Invalid token",
-    "noReadme": "No README.md"
+    "noReadme": "No README.md",
+    "pageNotFound": "Page does not exist"
 }

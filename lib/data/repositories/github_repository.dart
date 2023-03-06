@@ -1,12 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
-
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_icerock/data/repositories/auth_repository.dart';
 import 'package:flutter_application_icerock/domain/models/repository_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
 import '../utils/error_handler.dart';
@@ -36,7 +33,7 @@ class GithubRepository {
       }
       final res = await http.get(_uri, headers: {
         'Authorization': 'Bearer $token'
-      }).timeout(Duration(seconds: 8));
+      }).timeout(const Duration(seconds: 8));
       List<RepoModel> repos = [];
 
       bool isOk = httpErrorHandle(
@@ -67,6 +64,7 @@ class GithubRepository {
     } catch (e) {
       throw Exception(e);
     }
+    return null;
   }
 
   Future<int> getLangColor(String lang) async {
@@ -78,7 +76,7 @@ class GithubRepository {
 
   Future<String?> getMarkDownFile(String link) async {
     try {
-      final res = await http.get(Uri.parse(link)).timeout(Duration(seconds: 5));
+      final res = await http.get(Uri.parse(link)).timeout(const Duration(seconds: 5));
       bool isOk = httpErrorHandle(
         response: res,
       );

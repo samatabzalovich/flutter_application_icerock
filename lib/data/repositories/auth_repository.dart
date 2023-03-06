@@ -1,8 +1,4 @@
 import 'dart:async';
-import 'dart:io';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_application_icerock/domain/models/repository_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
@@ -23,10 +19,10 @@ class AuthRepository extends StateNotifier<String> {
 
   Future<bool> isTokenValid(String token) async {
     try {
-      var tokenRes = await http.post(
-        Uri.parse('$_uri'),
+      var tokenRes = await http.get(
+        _uri,
         headers: {'Authorization': 'Bearer $token'},
-      ).timeout(Duration(seconds: 6));
+      ).timeout(const Duration(seconds: 6));
       bool isOk = httpErrorHandle(
         response: tokenRes,
       );
