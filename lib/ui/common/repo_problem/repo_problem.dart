@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_icerock/data/utils/translation.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/default_button.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,76 +15,77 @@ class RepoProblem extends StatefulWidget {
 }
 
 class _RepoProblemState extends State<RepoProblem> {
-  Map<String, List<dynamic>> widgets = {
+  
+  @override
+  Widget build(BuildContext context) {
+    Map<String, List<dynamic>> widgets = {
     "con": [
-      'Retry',
+      translation(context).retry,
       SvgPicture.asset('assets/images/conn.svg'),
       TextWidget(
-        'Connection error',
+        translation(context).conTitle,
         alignment: TextAlign.center,
         height: 28,
         color: const Color(0xffCB4F4F),
       ),
       TextWidget(
-        'Check your Internet connection',
+        translation(context).conSubtitle,
         size: 14,
         height: 20,
         alignment: TextAlign.center,
       ),
     ],
     "load": [
-      'Retry',
+      translation(context).retry,
       Padding(
         padding: EdgeInsets.only(top: 100),
         child: SvgPicture.asset('assets/images/conn.svg'),
       ),
       TextWidget(
-        'Load error',
+        translation(context).loadTitle,
         alignment: TextAlign.center,
         height: 28,
         color: const Color(0xffCB4F4F),
       ),
       TextWidget(
-        'Check your Internet connection',
+        translation(context).conSubtitle,
         size: 14,
         height: 20,
         alignment: TextAlign.center,
       ),
     ],
     "empty": [
-      'Refresh',
+      translation(context).refresh,
       SvgPicture.asset('assets/images/Empty.svg'),
       TextWidget(
-        'Empty',
+        translation(context).emptyTitle,
         alignment: TextAlign.center,
         height: 28,
         color: const Color(0xff58A6FF),
       ),
       TextWidget(
-        'No repositories at the moment',
+        translation(context).emptySubtitle,
         size: 14,
         height: 20,
         alignment: TextAlign.center,
       ),
     ],
     "error": [
-      'Retry',
+      translation(context).retry,
       SvgPicture.asset('assets/images/error.svg'),
       TextWidget(
-        'Something Error',
+        translation(context).somethingErrorTitle,
         alignment: TextAlign.center, height: 28,
         color: const Color(0xffCB4F4F),
       ),
       TextWidget(
-        'Check your something',
+        translation(context).somethingErrorSubtitle,
         size: 14,
         height: 20,
         alignment: TextAlign.center,
       ),
     ]
   };
-  @override
-  Widget build(BuildContext context) {
     return Column(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [

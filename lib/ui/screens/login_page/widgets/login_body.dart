@@ -8,6 +8,8 @@ import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../data/utils/translation.dart';
+
 class LoginBody extends ConsumerStatefulWidget {
   LoginBody({super.key});
 
@@ -147,7 +149,7 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                         fontSize: 16,
                         color: CupertinoColors.white.withOpacity(0.5),
                       ),
-                      placeholder: 'Personal access token',
+                      placeholder: translation(context).textFieldText,
                       focusNode: _focusNode,
                       padding:
                           EdgeInsets.symmetric(horizontal: 16, vertical: 13),
@@ -158,15 +160,14 @@ class _LoginBodyState extends ConsumerState<LoginBody> {
                       style: const TextStyle(
                           fontSize: 16,
                           color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: 'SF Pro Text'),
+                          fontWeight: FontWeight.w400,),
                     ),
                   ),
                   if (isValid == false)
                     Padding(
                       padding: const EdgeInsets.only(top: 6, left: 16),
                       child: TextWidget(
-                        'Invalid token',
+                        translation(context).invalidToken,
                         color: Color(0xffCB4F4F),
                         size: 12,
                       ),

@@ -10,6 +10,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_application_icerock/ui/screens/repository_details_page/widgets/markdown_widget.dart';
 import 'package:flutter_application_icerock/ui/common/widgets/text_widget.dart';
 
+import '../../../../data/utils/translation.dart';
 import 'custom_markdown.dart';
 
 class RepositoryDetailsBody extends StatelessWidget {
@@ -66,7 +67,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                         width: 10,
                       ),
                       TextWidget(
-                        'License',
+                        translation(context).license,
                         weight: FontWeight.w500,
                       ),
                     ],
@@ -102,7 +103,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      TextWidget('stars'),
+                      TextWidget(translation(context).stars),
                     ],
                   ),
                   Row(
@@ -123,7 +124,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      TextWidget('forks'),
+                      TextWidget(translation(context).forks),
                     ],
                   ),
                   Row(
@@ -144,7 +145,7 @@ class RepositoryDetailsBody extends StatelessWidget {
                       const SizedBox(
                         width: 5,
                       ),
-                      TextWidget('watchers'),
+                      TextWidget(translation(context).watchers),
                     ],
                   )
                 ],

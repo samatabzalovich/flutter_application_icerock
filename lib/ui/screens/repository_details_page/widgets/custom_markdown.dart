@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../data/repositories/auth_repository.dart';
 import '../../../../data/repositories/github_repository.dart';
 import '../../../../data/services/network_status_service.dart';
+import '../../../../data/utils/translation.dart';
 import '../../../common/repo_problem/repo_problem.dart';
 import '../../../common/widgets/custom_progress_indicator.dart';
 import '../../../common/widgets/text_widget.dart';
@@ -51,7 +52,7 @@ class _CustomMarkdownState extends ConsumerState<CustomMarkdown> {
                 return Padding(
                     padding: EdgeInsets.only(left: 8),
                     child: TextWidget(
-                      "No README.md",
+                      translation(context).noReadme,
                       color: Colors.white.withOpacity(0.7),
                     ));
               }

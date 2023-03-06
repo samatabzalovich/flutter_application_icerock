@@ -21,16 +21,16 @@ class DefaultButton extends StatefulWidget {
 class _DefaultButtonState extends State<DefaultButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 48,
-      width: double.infinity,
-      margin: EdgeInsets.symmetric(
-          horizontal: 16, vertical: MediaQuery.of(context).orientation == Orientation.portrait ? widget.isFocused ? 18 : 36 : 45),
-      child: CupertinoButton(
-        // style: ElevatedButton.styleFrom(backgroundColor: ),
-        color: Color(0xff5A9357),
-        onPressed: widget.onPressedAction,
-        child: Visibility(visible: !widget.isLoading, replacement:   SizedBox(width: 24,child: CustomCircularProgressIndicator()), child: TextWidget(widget.name, weight: FontWeight.w600,),),
+    return GestureDetector(
+      onTap: widget.onPressedAction,
+      child: Container(
+        height: 48,
+        width: double.infinity,
+        
+        decoration: const BoxDecoration(color: Color(0xff5A9357), borderRadius: BorderRadius.all(Radius.circular(8))),
+        margin: EdgeInsets.symmetric(
+            horizontal: 16, vertical: MediaQuery.of(context).orientation == Orientation.portrait ? widget.isFocused ? 18 : 36 : 45),
+        child: Center(child: Visibility(visible: !widget.isLoading, replacement:   SizedBox(width: 24, height: 24,child: CustomCircularProgressIndicator()), child: TextWidget(widget.name, weight: FontWeight.w600,),)),
       ),
     );
   }
